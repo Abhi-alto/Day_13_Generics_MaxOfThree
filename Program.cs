@@ -1,9 +1,10 @@
 ﻿using Genericss;
 Console.WriteLine("Welcome to generics problem");
-Console.WriteLine("Enter first String");
-string A =Console.ReadLine();
-Console.WriteLine("Enter second String");
-string B = Console.ReadLine();
-Console.WriteLine("Enter third String");
-string C = Console.ReadLine();
-maximum.max(A,B,C);
+Console.WriteLine("Enter value 1");
+int A =Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter value 2");
+int B = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter value 3");
+int C = Convert.ToInt32(Console.ReadLine());
+maximum<int>.max(A,B,C);
+maximum<String>.max("Hey", "Hold", "On");

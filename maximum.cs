@@ -7,8 +7,17 @@ using System.Threading.Tasks;
 namespace Genericss
 {
     public class maximum<utype> where utype:IComparable
-    {
-        public static void max(utype a, utype b, utype c)
+    {   
+        utype a;                                                                    //instance variables
+        utype b;
+        utype c;
+        public maximum(utype a, utype b, utype c)                           //parameterized constructor
+        {
+            this.a = a;                                                     //initializing the values of the instance variables
+            this.b = b; 
+            this.c = c;
+        }
+        public void max()                                                   //comparing and displaying the greatest value
         {
             if (a.CompareTo(b)>0 && a.CompareTo(c) > 0|| a.CompareTo(b) >= 0 && a.CompareTo(c) > 0|| a.CompareTo(b) > 0 && a.CompareTo(c) >= 0)
             {

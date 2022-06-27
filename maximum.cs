@@ -8,17 +8,17 @@ namespace Genericss
 {
     public class maximum
     {
-        public static void max(int a, int b, int c)
+        public static void max(double a, double b, double c)
         {
-            if (a > b && a > c)
+            if (a.CompareTo(b)>0 && a.CompareTo(c) > 0)
             {
                 Console.WriteLine(a + " is the greatest");
             }
-            else if (b>a && b>c)
+            else if (b.CompareTo(a) > 0 && b.CompareTo(c) > 0)
             {
                 Console.WriteLine(b + " is the greatest");
             }
-            else if (c>a && c>b)
+            else if (c.CompareTo(a) > 0 && c.CompareTo(b) > 0)
             {
                 Console.WriteLine(c + " is the greatest");
             }

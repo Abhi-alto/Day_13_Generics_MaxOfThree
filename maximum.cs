@@ -8,33 +8,26 @@ namespace Genericss
 {
     public class maximum<utype> where utype:IComparable
     {   
-        utype a;                                                                    //instance variables
-        utype b;
-        utype c;
-        public maximum(utype a, utype b, utype c)                           //parameterized constructor
+        utype[] array;                                                                    //instance variables array
+        public maximum(utype[] array)                           //parameterized constructor
         {
-            this.a = a;                                                     //initializing the values of the instance variables
-            this.b = b; 
-            this.c = c;
+            this.array = array;                                                     //initializing the values of the instance variables
         }
-        public void max()                                                   //comparing and displaying the greatest value
+        public void sort()                                                   //sorting the array
         {
-            if (a.CompareTo(b)>0 && a.CompareTo(c) > 0|| a.CompareTo(b) >= 0 && a.CompareTo(c) > 0|| a.CompareTo(b) > 0 && a.CompareTo(c) >= 0)
+             Array.Sort(array); 
+        }
+        public void display()               //displaying the elements of the array
+        {
+            foreach(var utype in array)
             {
-                Console.WriteLine(a + " is the greatest");
+                Console.Write(utype+" ");
             }
-            else if (b.CompareTo(a) > 0 && b.CompareTo(c) > 0|| b.CompareTo(a) >= 0 && b.CompareTo(c) > 0|| b.CompareTo(a) > 0 && b.CompareTo(c) >=0)
-            {
-                Console.WriteLine(b + " is the greatest");
-            }
-            else if (c.CompareTo(a) > 0 && c.CompareTo(b) > 0|| c.CompareTo(a) > 0 && c.CompareTo(b) >= 0|| c.CompareTo(a) >= 0 && c.CompareTo(b) > 0)
-            {
-                Console.WriteLine(c + " is the greatest");
-            }
-            else
-            {
-                Console.WriteLine("All three are equal");
-            }
+            Console.WriteLine();
+        }
+        public utype max()                  //DISPLAYING THE LAST ELEMENT AS IT IS THE GREATEST ELEMENT
+        {
+            return array[array.Length-1];
         }
     }
 }

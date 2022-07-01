@@ -8,18 +8,18 @@ namespace Genericss
 {
     public class maximum<utype> where utype:IComparable
     {   
-        utype[] array;                                                                    //instance variables array
-        public maximum(utype[] array)                           //parameterized constructor
+        public utype[] values;                                                                    //instance variables array
+        public maximum(params utype[] values)                           //parameterized constructor with params 
         {
-            this.array = array;                                                     //initializing the values of the instance variables
+            this.values = values;                                                     //initializing the values of the instance variables
         }
         public void sort()                                                   //sorting the array
         {
-             Array.Sort(array); 
+             Array.Sort(values); 
         }
         public void display()               //displaying the elements of the array
         {
-            foreach(var utype in array)
+            foreach(var utype in values)
             {
                 Console.Write(utype+" ");
             }
@@ -27,7 +27,7 @@ namespace Genericss
         }
         public utype max()                  //DISPLAYING THE LAST ELEMENT AS IT IS THE GREATEST ELEMENT
         {
-            return array[array.Length-1];
+            return values[values.Length-1];
         }
     }
 }

@@ -1,9 +1,5 @@
 ﻿using Genericss;
 Console.WriteLine("Welcome to generics problem");
-<<<<<<< HEAD
-=======
-
->>>>>>> max_ValueWithFunctionalities
 maximum<int> inte = new maximum<int>(5, 456, 78, 34, 2);
 inte.sort();
 inte.display();

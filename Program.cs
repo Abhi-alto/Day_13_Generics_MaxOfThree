@@ -1,8 +1,5 @@
 ﻿using Genericss;
 Console.WriteLine("Welcome to generics problem");
-int[] ar1 = new int[5] { 5, 456, 78, 34, 2 };
-string[] ar2 = new string[4] { "Abhi","Mohit","Jason","Krishna"};
-float[] ar3 = new float[7] { 5.67f,3.456f, 78.3f, 34.33f, 2.3f,0.45f,11.3f };
 
 maximum<int> inte = new maximum<int>(5, 456, 78, 34, 2);
 inte.sort();
